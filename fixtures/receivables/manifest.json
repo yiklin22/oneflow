@@ -1,0 +1,729 @@
+{
+ "note": "Invented data. `held` means a customer mail touches the item, so no reminder may go out until a person has read it.",
+ "as_of": "2026-11-30",
+ "paid_in_later_export": [
+  "GL36106039",
+  "FQ28213691"
+ ],
+ "items": [
+  {
+   "customer": "禾臻精密股份有限公司",
+   "invoice_no": "HM51562023",
+   "overdue": true,
+   "days": 60,
+   "held": true,
+   "may_remind": false,
+   "planted": []
+  },
+  {
+   "customer": "禾臻精密股份有限公司",
+   "invoice_no": "GL40035288",
+   "overdue": true,
+   "days": 26,
+   "held": true,
+   "may_remind": false,
+   "planted": []
+  },
+  {
+   "customer": "禾臻精密股份有限公司",
+   "invoice_no": null,
+   "overdue": true,
+   "days": 62,
+   "held": false,
+   "may_remind": false,
+   "planted": [
+    "no_invoice_no"
+   ]
+  },
+  {
+   "customer": "禾臻精密股份有限公司",
+   "invoice_no": "CQ13114525",
+   "overdue": false,
+   "days": 0,
+   "held": false,
+   "may_remind": false,
+   "planted": []
+  },
+  {
+   "customer": "禾臻精密股份有限公司",
+   "invoice_no": "GL36106039",
+   "overdue": true,
+   "days": 62,
+   "held": false,
+   "may_remind": true,
+   "planted": []
+  },
+  {
+   "customer": "鉅暘機械有限公司",
+   "invoice_no": "BL12119064",
+   "overdue": true,
+   "days": 57,
+   "held": true,
+   "may_remind": false,
+   "planted": []
+  },
+  {
+   "customer": "鉅暘機械有限公司",
+   "invoice_no": "GK91935910",
+   "overdue": true,
+   "days": 25,
+   "held": true,
+   "may_remind": false,
+   "planted": []
+  },
+  {
+   "customer": "鉅暘機械有限公司",
+   "invoice_no": null,
+   "overdue": true,
+   "days": 60,
+   "held": false,
+   "may_remind": false,
+   "planted": [
+    "no_invoice_no"
+   ]
+  },
+  {
+   "customer": "鉅暘機械有限公司",
+   "invoice_no": "AL39292609",
+   "overdue": false,
+   "days": 0,
+   "held": false,
+   "may_remind": false,
+   "planted": []
+  },
+  {
+   "customer": "鉅暘機械有限公司",
+   "invoice_no": "CM48687710",
+   "overdue": false,
+   "days": 0,
+   "held": false,
+   "may_remind": false,
+   "planted": []
+  },
+  {
+   "customer": "昇揚自動化股份有限公司",
+   "invoice_no": "DK36749149",
+   "overdue": true,
+   "days": 54,
+   "held": true,
+   "may_remind": false,
+   "planted": []
+  },
+  {
+   "customer": "昇揚自動化股份有限公司",
+   "invoice_no": "FQ28213691",
+   "overdue": true,
+   "days": 24,
+   "held": false,
+   "may_remind": true,
+   "planted": []
+  },
+  {
+   "customer": "昇揚自動化股份有限公司",
+   "invoice_no": "FP93102659",
+   "overdue": true,
+   "days": 41,
+   "held": false,
+   "may_remind": false,
+   "planted": [
+    "no_email"
+   ]
+  },
+  {
+   "customer": "昇揚自動化股份有限公司",
+   "invoice_no": "CM84644237",
+   "overdue": true,
+   "days": 12,
+   "held": false,
+   "may_remind": true,
+   "planted": []
+  },
+  {
+   "customer": "昇揚自動化股份有限公司",
+   "invoice_no": "EL44950899",
+   "overdue": false,
+   "days": 0,
+   "held": false,
+   "may_remind": false,
+   "planted": []
+  },
+  {
+   "customer": "旭海五金行",
+   "invoice_no": "EK31315953",
+   "overdue": true,
+   "days": 51,
+   "held": true,
+   "may_remind": false,
+   "planted": []
+  },
+  {
+   "customer": "旭海五金行",
+   "invoice_no": "GL39410160",
+   "overdue": true,
+   "days": 23,
+   "held": false,
+   "may_remind": true,
+   "planted": []
+  },
+  {
+   "customer": "旭海五金行",
+   "invoice_no": "AN10778123",
+   "overdue": true,
+   "days": 66,
+   "held": false,
+   "may_remind": false,
+   "planted": [
+    "no_email"
+   ]
+  },
+  {
+   "customer": "旭海五金行",
+   "invoice_no": "CN92266991",
+   "overdue": false,
+   "days": 0,
+   "held": false,
+   "may_remind": false,
+   "planted": []
+  },
+  {
+   "customer": "旭海五金行",
+   "invoice_no": "HM59709671",
+   "overdue": true,
+   "days": 18,
+   "held": false,
+   "may_remind": true,
+   "planted": []
+  },
+  {
+   "customer": "柏昕科技股份有限公司",
+   "invoice_no": "AK44504269",
+   "overdue": true,
+   "days": 48,
+   "held": true,
+   "may_remind": false,
+   "planted": []
+  },
+  {
+   "customer": "柏昕科技股份有限公司",
+   "invoice_no": "AN63293039",
+   "overdue": true,
+   "days": 22,
+   "held": true,
+   "may_remind": false,
+   "planted": []
+  },
+  {
+   "customer": "柏昕科技股份有限公司",
+   "invoice_no": "HK30754141",
+   "overdue": false,
+   "days": 0,
+   "held": true,
+   "may_remind": false,
+   "planted": [
+    "no_receipt"
+   ]
+  },
+  {
+   "customer": "柏昕科技股份有限公司",
+   "invoice_no": "BM89195955",
+   "overdue": true,
+   "days": 36,
+   "held": true,
+   "may_remind": false,
+   "planted": []
+  },
+  {
+   "customer": "柏昕科技股份有限公司",
+   "invoice_no": "DL55366249",
+   "overdue": false,
+   "days": 0,
+   "held": true,
+   "may_remind": false,
+   "planted": []
+  },
+  {
+   "customer": "嘉東工業有限公司",
+   "invoice_no": "HK26884178",
+   "overdue": true,
+   "days": 45,
+   "held": true,
+   "may_remind": false,
+   "planted": []
+  },
+  {
+   "customer": "嘉東工業有限公司",
+   "invoice_no": "GQ44960741",
+   "overdue": true,
+   "days": 21,
+   "held": false,
+   "may_remind": true,
+   "planted": []
+  },
+  {
+   "customer": "嘉東工業有限公司",
+   "invoice_no": "BN74165921",
+   "overdue": true,
+   "days": 17,
+   "held": false,
+   "may_remind": true,
+   "planted": [
+    "no_receipt"
+   ]
+  },
+  {
+   "customer": "嘉東工業有限公司",
+   "invoice_no": "CP46235804",
+   "overdue": false,
+   "days": 0,
+   "held": false,
+   "may_remind": false,
+   "planted": []
+  },
+  {
+   "customer": "嘉東工業有限公司",
+   "invoice_no": "GP35099076",
+   "overdue": false,
+   "days": 0,
+   "held": false,
+   "may_remind": false,
+   "planted": []
+  },
+  {
+   "customer": "宏碩模具有限公司",
+   "invoice_no": "HM36182298",
+   "overdue": true,
+   "days": 42,
+   "held": true,
+   "may_remind": false,
+   "planted": []
+  },
+  {
+   "customer": "宏碩模具有限公司",
+   "invoice_no": "BQ93351127",
+   "overdue": true,
+   "days": 20,
+   "held": true,
+   "may_remind": false,
+   "planted": []
+  },
+  {
+   "customer": "宏碩模具有限公司",
+   "invoice_no": "AL77291431",
+   "overdue": false,
+   "days": 0,
+   "held": true,
+   "may_remind": false,
+   "planted": [
+    "no_receipt"
+   ]
+  },
+  {
+   "customer": "宏碩模具有限公司",
+   "invoice_no": "EQ76452956",
+   "overdue": true,
+   "days": 17,
+   "held": true,
+   "may_remind": false,
+   "planted": []
+  },
+  {
+   "customer": "宏碩模具有限公司",
+   "invoice_no": "BN20560501",
+   "overdue": true,
+   "days": 31,
+   "held": true,
+   "may_remind": false,
+   "planted": []
+  },
+  {
+   "customer": "立岡電機股份有限公司",
+   "invoice_no": "AQ59294395",
+   "overdue": true,
+   "days": 39,
+   "held": true,
+   "may_remind": false,
+   "planted": []
+  },
+  {
+   "customer": "立岡電機股份有限公司",
+   "invoice_no": "DK57964002",
+   "overdue": true,
+   "days": 19,
+   "held": false,
+   "may_remind": true,
+   "planted": []
+  },
+  {
+   "customer": "立岡電機股份有限公司",
+   "invoice_no": "FQ10629209",
+   "overdue": false,
+   "days": 0,
+   "held": false,
+   "may_remind": false,
+   "planted": [
+    "no_receipt"
+   ]
+  },
+  {
+   "customer": "立岡電機股份有限公司",
+   "invoice_no": "AN96725457",
+   "overdue": false,
+   "days": 0,
+   "held": false,
+   "may_remind": false,
+   "planted": []
+  },
+  {
+   "customer": "立岡電機股份有限公司",
+   "invoice_no": "HM29471493",
+   "overdue": true,
+   "days": 12,
+   "held": false,
+   "may_remind": true,
+   "planted": []
+  },
+  {
+   "customer": "永翊包裝材料行",
+   "invoice_no": "BL96416411",
+   "overdue": true,
+   "days": 36,
+   "held": true,
+   "may_remind": false,
+   "planted": []
+  },
+  {
+   "customer": "永翊包裝材料行",
+   "invoice_no": "GN53099708",
+   "overdue": true,
+   "days": 18,
+   "held": true,
+   "may_remind": false,
+   "planted": []
+  },
+  {
+   "customer": "永翊包裝材料行",
+   "invoice_no": "GN70071098",
+   "overdue": true,
+   "days": 29,
+   "held": true,
+   "may_remind": false,
+   "planted": [
+    "no_receipt"
+   ]
+  },
+  {
+   "customer": "永翊包裝材料行",
+   "invoice_no": "DP33019408",
+   "overdue": true,
+   "days": 5,
+   "held": true,
+   "may_remind": false,
+   "planted": []
+  },
+  {
+   "customer": "永翊包裝材料行",
+   "invoice_no": "DK56188142",
+   "overdue": false,
+   "days": 0,
+   "held": true,
+   "may_remind": false,
+   "planted": []
+  },
+  {
+   "customer": "晟田金屬有限公司",
+   "invoice_no": "GK82084899",
+   "overdue": true,
+   "days": 33,
+   "held": true,
+   "may_remind": false,
+   "planted": []
+  },
+  {
+   "customer": "晟田金屬有限公司",
+   "invoice_no": "GM96114467",
+   "overdue": true,
+   "days": 17,
+   "held": false,
+   "may_remind": true,
+   "planted": []
+  },
+  {
+   "customer": "晟田金屬有限公司",
+   "invoice_no": "AL16921072",
+   "overdue": false,
+   "days": 0,
+   "held": false,
+   "may_remind": false,
+   "planted": [
+    "due_before_invoice"
+   ]
+  },
+  {
+   "customer": "晟田金屬有限公司",
+   "invoice_no": "HK58583287",
+   "overdue": false,
+   "days": 0,
+   "held": false,
+   "may_remind": false,
+   "planted": []
+  },
+  {
+   "customer": "晟田金屬有限公司",
+   "invoice_no": "EL83366262",
+   "overdue": false,
+   "days": 0,
+   "held": false,
+   "may_remind": false,
+   "planted": []
+  },
+  {
+   "customer": "群嶧機電工程有限公司",
+   "invoice_no": "AL26916440",
+   "overdue": true,
+   "days": 30,
+   "held": true,
+   "may_remind": false,
+   "planted": []
+  },
+  {
+   "customer": "群嶧機電工程有限公司",
+   "invoice_no": "FP62467143",
+   "overdue": true,
+   "days": 16,
+   "held": false,
+   "may_remind": true,
+   "planted": []
+  },
+  {
+   "customer": "群嶧機電工程有限公司",
+   "invoice_no": "DM66260537",
+   "overdue": false,
+   "days": 0,
+   "held": false,
+   "may_remind": false,
+   "planted": [
+    "received_over_amount"
+   ]
+  },
+  {
+   "customer": "群嶧機電工程有限公司",
+   "invoice_no": "HQ28534112",
+   "overdue": false,
+   "days": 0,
+   "held": false,
+   "may_remind": false,
+   "planted": []
+  },
+  {
+   "customer": "群嶧機電工程有限公司",
+   "invoice_no": "EN15416483",
+   "overdue": false,
+   "days": 0,
+   "held": false,
+   "may_remind": false,
+   "planted": []
+  },
+  {
+   "customer": "泓洋貿易有限公司",
+   "invoice_no": "GN43572213",
+   "overdue": true,
+   "days": 27,
+   "held": true,
+   "may_remind": false,
+   "planted": []
+  },
+  {
+   "customer": "泓洋貿易有限公司",
+   "invoice_no": "EL18481531",
+   "overdue": true,
+   "days": 15,
+   "held": true,
+   "may_remind": false,
+   "planted": []
+  },
+  {
+   "customer": "泓洋貿易有限公司",
+   "invoice_no": "CK60426958",
+   "overdue": false,
+   "days": 0,
+   "held": true,
+   "may_remind": false,
+   "planted": [
+    "bad_amount"
+   ]
+  },
+  {
+   "customer": "泓洋貿易有限公司",
+   "invoice_no": "HK36474089",
+   "overdue": false,
+   "days": 0,
+   "held": true,
+   "may_remind": false,
+   "planted": []
+  },
+  {
+   "customer": "泓洋貿易有限公司",
+   "invoice_no": "BN56066364",
+   "overdue": false,
+   "days": 0,
+   "held": true,
+   "may_remind": false,
+   "planted": []
+  }
+ ],
+ "mails": [
+  {
+   "file": "mail-01.eml",
+   "truth_pile": "dispute",
+   "invoices": [
+    "HM51562023"
+   ],
+   "customer": "禾臻精密股份有限公司",
+   "belongs_to": null,
+   "repeat_of_message": null
+  },
+  {
+   "file": "mail-02.eml",
+   "truth_pile": "dispute",
+   "invoices": [
+    "BL12119064"
+   ],
+   "customer": "鉅暘機械有限公司",
+   "belongs_to": null,
+   "repeat_of_message": null
+  },
+  {
+   "file": "mail-03.eml",
+   "truth_pile": "dispute",
+   "invoices": [
+    "DK36749149"
+   ],
+   "customer": "昇揚自動化股份有限公司",
+   "belongs_to": null,
+   "repeat_of_message": null
+  },
+  {
+   "file": "mail-04.eml",
+   "truth_pile": "dispute",
+   "invoices": [
+    "EK31315953"
+   ],
+   "customer": "旭海五金行",
+   "belongs_to": null,
+   "repeat_of_message": null
+  },
+  {
+   "file": "mail-05.eml",
+   "truth_pile": "dispute",
+   "invoices": [],
+   "customer": "柏昕科技股份有限公司",
+   "belongs_to": null,
+   "repeat_of_message": null
+  },
+  {
+   "file": "mail-06.eml",
+   "truth_pile": "claims_paid",
+   "invoices": [
+    "HK26884178"
+   ],
+   "customer": "嘉東工業有限公司",
+   "belongs_to": null,
+   "repeat_of_message": null
+  },
+  {
+   "file": "mail-07.eml",
+   "truth_pile": "claims_paid",
+   "invoices": [
+    "HM36182298"
+   ],
+   "customer": "宏碩模具有限公司",
+   "belongs_to": null,
+   "repeat_of_message": null
+  },
+  {
+   "file": "mail-08.eml",
+   "truth_pile": "claims_paid",
+   "invoices": [
+    "AQ59294395"
+   ],
+   "customer": "立岡電機股份有限公司",
+   "belongs_to": null,
+   "repeat_of_message": null
+  },
+  {
+   "file": "mail-09.eml",
+   "truth_pile": "claims_paid",
+   "invoices": [],
+   "customer": "永翊包裝材料行",
+   "belongs_to": null,
+   "repeat_of_message": null
+  },
+  {
+   "file": "mail-10.eml",
+   "truth_pile": "promise",
+   "invoices": [
+    "GK82084899"
+   ],
+   "customer": "晟田金屬有限公司",
+   "belongs_to": null,
+   "repeat_of_message": null
+  },
+  {
+   "file": "mail-11.eml",
+   "truth_pile": "promise",
+   "invoices": [
+    "AL26916440"
+   ],
+   "customer": "群嶧機電工程有限公司",
+   "belongs_to": null,
+   "repeat_of_message": null
+  },
+  {
+   "file": "mail-12.eml",
+   "truth_pile": "other",
+   "invoices": [],
+   "customer": "泓洋貿易有限公司",
+   "belongs_to": null,
+   "repeat_of_message": null
+  },
+  {
+   "file": "mail-13.eml",
+   "truth_pile": "claims_paid",
+   "invoices": [
+    "GL40035288"
+   ],
+   "customer": "禾臻精密股份有限公司",
+   "belongs_to": null,
+   "repeat_of_message": null
+  },
+  {
+   "file": "mail-14.eml",
+   "truth_pile": "claims_paid",
+   "invoices": [],
+   "customer": null,
+   "belongs_to": "宏碩模具有限公司",
+   "repeat_of_message": null
+  },
+  {
+   "file": "mail-15.eml",
+   "truth_pile": "dispute",
+   "invoices": [
+    "BL12119064",
+    "GK91935910"
+   ],
+   "customer": "鉅暘機械有限公司",
+   "belongs_to": null,
+   "repeat_of_message": null
+  },
+  {
+   "file": "mail-16.eml",
+   "truth_pile": "claims_paid",
+   "invoices": [
+    "HK26884178"
+   ],
+   "customer": "嘉東工業有限公司",
+   "belongs_to": null,
+   "repeat_of_message": "<m6@jiadong.example>"
+  }
+ ]
+}

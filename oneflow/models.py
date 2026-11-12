@@ -186,7 +186,8 @@ class ArItem(Base):
     contact_email: Mapped[str | None] = mapped_column(String(200))
     has_receipt: Mapped[bool | None] = mapped_column(Boolean)    # signed delivery receipt on file
     issues: Mapped[list] = mapped_column(JSON, default=list)     # rule failures and missing pieces
-    hold: Mapped[str | None] = mapped_column(String(30))         # claims_paid | dispute | customer_claims_paid | manual
+    hold: Mapped[str | None] = mapped_column(String(30))         # dispute | claims_paid | promise | other: why no reminder may go out
+    hold_cleared_upto: Mapped[int] = mapped_column(Integer, default=0)   # mail signals up to this id were read and cleared by a person
     reminders: Mapped[list["Reminder"]] = relationship(order_by="Reminder.id")
 
 
@@ -208,8 +209,8 @@ class MailSignal(Base):
     mail_id: Mapped[int] = mapped_column(ForeignKey("mails.id"))
     ar_item_id: Mapped[int | None] = mapped_column(ForeignKey("ar_items.id"))
     customer: Mapped[str | None] = mapped_column(String(200))
-    kind: Mapped[str] = mapped_column(String(20))          # claims_paid | dispute | promise
-    linked_by: Mapped[str] = mapped_column(String(20))     # invoice_no | sender
+    kind: Mapped[str] = mapped_column(String(20))          # dispute | claims_paid | promise | other
+    linked_by: Mapped[str] = mapped_column(String(20))     # invoice_no | sender | manual | nobody
     evidence: Mapped[str] = mapped_column(Text)
     mail: Mapped[Mail] = relationship()
 
