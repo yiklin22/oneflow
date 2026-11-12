@@ -1,0 +1,28 @@
+[project]
+name = "oneflow"
+version = "0.1.0"
+description = "三種後勤助手（訂單輸入、應收帳款、維修接單）與共用底座"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "fastapi>=0.162.5",
+    "jinja2>=3.1.6",
+    "openpyxl>=3.1.5",
+    "pdfplumber>=0.11.10",
+    "pgserver>=0.1.4",
+    "psycopg[binary]>=3.3.9",
+    "python-multipart>=0.0.33",
+    "reportlab>=5.1.0",
+    "sqlalchemy>=2.1.8",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=9.2.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+filterwarnings = ["ignore::DeprecationWarning"]

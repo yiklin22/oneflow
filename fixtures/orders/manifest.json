@@ -1,0 +1,2050 @@
+{
+ "note": "Invented data. `planted` lists the difficulty put on a line on purpose; a null truth value means the order does not say and a person has to decide.",
+ "unused_plants": [
+  "inactive",
+  "typo",
+  "normalized",
+  "price",
+  "pack",
+  "normalized",
+  "bad_date",
+  "pack",
+  "bad_qty"
+ ],
+ "orders": [
+  {
+   "file": "order-01.pdf",
+   "layout": "A",
+   "customer": "禾臻精密股份有限公司",
+   "po_no": "P2611-1000",
+   "order_date": "2026-11-06",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "WS-M4-SS",
+     "qty": 5000,
+     "due": "2026-12-17",
+     "planted": [
+      "typo"
+     ]
+    },
+    {
+     "line_no": 2,
+     "part_no": "SC-M6030-SS",
+     "qty": 2000,
+     "due": "2026-12-12",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "SC-M3008-SS",
+     "qty": 50,
+     "due": "2026-12-10",
+     "planted": []
+    },
+    {
+     "line_no": 4,
+     "part_no": "SC-M6020-SS",
+     "qty": 200,
+     "due": "2026-11-30",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-02.xlsx",
+   "layout": "C",
+   "customer": "鉅暘機械有限公司",
+   "po_no": "PO2611-1003",
+   "order_date": "2026-11-10",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "SC-M6030-SS",
+     "qty": 200,
+     "due": "2026-11-23",
+     "planted": [
+      "fullwidth"
+     ]
+    },
+    {
+     "line_no": 2,
+     "part_no": "OR-P16-NBR",
+     "qty": 200,
+     "due": "2026-11-18",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "NT-M5-ZN",
+     "qty": 500,
+     "due": "2026-12-15",
+     "planted": []
+    },
+    {
+     "line_no": 4,
+     "part_no": "NT-M3-ZN",
+     "qty": 1200,
+     "due": "2026-11-19",
+     "planted": []
+    },
+    {
+     "line_no": 5,
+     "part_no": "OR-P30-NBR",
+     "qty": 300,
+     "due": "2026-12-20",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-03.xlsx",
+   "layout": "C",
+   "customer": "昇揚自動化股份有限公司",
+   "po_no": "P2611-1006",
+   "order_date": "2026-11-02",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "CT-150-BK",
+     "qty": 1200,
+     "due": "2026-12-07",
+     "planted": []
+    },
+    {
+     "line_no": 2,
+     "part_no": "SC-M5016-SS",
+     "qty": 1000,
+     "due": "2026-12-13",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "NT-M10-ZN",
+     "qty": 2000,
+     "due": "2026-11-12",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-04.xlsx",
+   "layout": "D",
+   "customer": "旭海五金行",
+   "po_no": "PO2611-1009",
+   "order_date": "2026-11-03",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "SC-M3012-SS",
+     "qty": 2000,
+     "due": "2026-11-28",
+     "planted": []
+    },
+    {
+     "line_no": 2,
+     "part_no": "NT-M4-ZN",
+     "qty": 1000,
+     "due": "2026-12-13",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "WS-M5-SS",
+     "qty": 200,
+     "due": "2026-11-12",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-05.pdf",
+   "layout": "E",
+   "customer": "柏昕科技股份有限公司",
+   "po_no": "P2611-1012",
+   "order_date": "2026-11-09",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "SC-M8040-SS",
+     "qty": 2000,
+     "due": "2026-11-28",
+     "planted": []
+    },
+    {
+     "line_no": 2,
+     "part_no": "SC-M4012-SS",
+     "qty": 1200,
+     "due": "2026-11-28",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "SC-M6020-SS",
+     "qty": 1000,
+     "due": "2026-11-28",
+     "planted": []
+    },
+    {
+     "line_no": 4,
+     "part_no": "OR-P20-NBR",
+     "qty": 500,
+     "due": "2026-11-28",
+     "planted": []
+    },
+    {
+     "line_no": 5,
+     "part_no": "BR-6200-2RS",
+     "qty": 1000,
+     "due": "2026-11-28",
+     "planted": []
+    },
+    {
+     "line_no": 6,
+     "part_no": "WS-M3-SS",
+     "qty": 5000,
+     "due": "2026-11-28",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-06.pdf",
+   "layout": "A",
+   "customer": "嘉東工業有限公司",
+   "po_no": "PO2611-1015",
+   "order_date": "2026-11-04",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "SC-M4016-SS",
+     "qty": 1200,
+     "due": "2026-12-18",
+     "planted": []
+    },
+    {
+     "line_no": 2,
+     "part_no": "NT-M10-ZN",
+     "qty": 100,
+     "due": "2026-11-23",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "WS-M10-SS",
+     "qty": 1200,
+     "due": "2026-12-17",
+     "planted": []
+    },
+    {
+     "line_no": 4,
+     "part_no": "NT-M6-ZN",
+     "qty": 2000,
+     "due": "2026-11-14",
+     "planted": []
+    },
+    {
+     "line_no": 5,
+     "part_no": "NT-M5-ZN",
+     "qty": 5000,
+     "due": "2026-11-19",
+     "planted": []
+    },
+    {
+     "line_no": 6,
+     "part_no": "SC-M5025-SS",
+     "qty": 50,
+     "due": "2026-12-10",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-07.pdf",
+   "layout": "B",
+   "customer": "禾臻精密股份有限公司",
+   "po_no": "P2611-1018",
+   "order_date": "2026-11-04",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "SC-M3008-SS",
+     "qty": 5000,
+     "due": "2026-12-15",
+     "planted": [
+      "price"
+     ]
+    },
+    {
+     "line_no": 2,
+     "part_no": "BR-6205-2RS",
+     "qty": 50,
+     "due": "2026-11-19",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "SC-M5016-SS",
+     "qty": 1000,
+     "due": "2026-12-04",
+     "planted": []
+    },
+    {
+     "line_no": 4,
+     "part_no": "OR-P20-NBR",
+     "qty": 5000,
+     "due": "2026-11-26",
+     "planted": []
+    },
+    {
+     "line_no": 5,
+     "part_no": "OR-P30-NBR",
+     "qty": 500,
+     "due": "2026-11-26",
+     "planted": [
+      "pack"
+     ]
+    }
+   ]
+  },
+  {
+   "file": "order-08.xlsx",
+   "layout": "C",
+   "customer": "鉅暘機械有限公司",
+   "po_no": "PO2611-1021",
+   "order_date": "2026-11-02",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "WS-M6-SS",
+     "qty": 300,
+     "due": "2026-11-29",
+     "planted": []
+    },
+    {
+     "line_no": 2,
+     "part_no": "CT-200-BK",
+     "qty": 200,
+     "due": "2026-11-21",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "BR-6200-2RS",
+     "qty": 2000,
+     "due": "2026-11-20",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-09.xlsx",
+   "layout": "D",
+   "customer": "昇揚自動化股份有限公司",
+   "po_no": "P2611-1024",
+   "order_date": "2026-11-05",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "OR-P16-NBR",
+     "qty": 1200,
+     "due": "2026-11-26",
+     "planted": []
+    },
+    {
+     "line_no": 2,
+     "part_no": "OR-P30-NBR",
+     "qty": 500,
+     "due": "2026-11-15",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "WS-M10-SS",
+     "qty": 100,
+     "due": "2026-11-14",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-10.pdf",
+   "layout": "E",
+   "customer": "旭海五金行",
+   "po_no": "PO2611-1027",
+   "order_date": "2026-11-06",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "WS-M5-SS",
+     "qty": 50,
+     "due": "2026-11-18",
+     "planted": []
+    },
+    {
+     "line_no": 2,
+     "part_no": "SC-M3008-SS",
+     "qty": 50,
+     "due": "2026-11-18",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "SC-M6030-SS",
+     "qty": 1200,
+     "due": "2026-11-18",
+     "planted": []
+    },
+    {
+     "line_no": 4,
+     "part_no": "SC-M5016-SS",
+     "qty": 300,
+     "due": "2026-11-18",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-11.pdf",
+   "layout": "A",
+   "customer": "柏昕科技股份有限公司",
+   "po_no": "P2611-1030",
+   "order_date": "2026-11-08",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "SC-M6030-SS",
+     "qty": 500,
+     "due": "2026-12-22",
+     "planted": [
+      "wrong_valid"
+     ]
+    },
+    {
+     "line_no": 2,
+     "part_no": "SC-M5025-SS",
+     "qty": 300,
+     "due": null,
+     "planted": [
+      "no_due"
+     ]
+    },
+    {
+     "line_no": 3,
+     "part_no": "SC-M4012-SS",
+     "qty": 1000,
+     "due": "2026-12-13",
+     "planted": []
+    },
+    {
+     "line_no": 4,
+     "part_no": "OR-P16-NBR",
+     "qty": 200,
+     "due": "2026-12-01",
+     "planted": [
+      "normalized"
+     ]
+    }
+   ]
+  },
+  {
+   "file": "order-12.pdf",
+   "layout": "B",
+   "customer": "嘉東工業有限公司",
+   "po_no": "PO2611-1033",
+   "order_date": "2026-11-04",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "OR-P20-NBR",
+     "qty": 2000,
+     "due": null,
+     "planted": [
+      "bad_date"
+     ]
+    },
+    {
+     "line_no": 2,
+     "part_no": "BR-6205-2RS",
+     "qty": 1200,
+     "due": "2026-11-29",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-13.xlsx",
+   "layout": "C",
+   "customer": "禾臻精密股份有限公司",
+   "po_no": "P2611-1036",
+   "order_date": "2026-11-02",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "WS-M10-SS",
+     "qty": 5000,
+     "due": "2026-12-03",
+     "planted": [
+      "pack"
+     ]
+    },
+    {
+     "line_no": 2,
+     "part_no": "BR-6200-2RS",
+     "qty": 100,
+     "due": "2026-11-19",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "SC-M4020-SS",
+     "qty": 2000,
+     "due": "2026-11-09",
+     "planted": []
+    },
+    {
+     "line_no": 4,
+     "part_no": "CT-100-BK",
+     "qty": 300,
+     "due": "2026-11-21",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-14.xlsx",
+   "layout": "C",
+   "customer": "鉅暘機械有限公司",
+   "po_no": "PO2611-1039",
+   "order_date": "2026-11-05",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "SC-M6020-SS",
+     "qty": 2000,
+     "due": "2026-12-10",
+     "planted": []
+    },
+    {
+     "line_no": 2,
+     "part_no": "SC-M8040-SS",
+     "qty": 1000,
+     "due": "2026-12-15",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "BR-6202-2RS",
+     "qty": 50,
+     "due": "2026-11-27",
+     "planted": []
+    },
+    {
+     "line_no": 4,
+     "part_no": "WS-M8-SS",
+     "qty": 2500,
+     "due": "2026-12-04",
+     "planted": [
+      "pack"
+     ]
+    },
+    {
+     "line_no": 5,
+     "part_no": "SC-M3012-SS",
+     "qty": 50,
+     "due": "2026-11-28",
+     "planted": [
+      "typo"
+     ]
+    }
+   ]
+  },
+  {
+   "file": "order-15.pdf",
+   "layout": "E",
+   "customer": "昇揚自動化股份有限公司",
+   "po_no": "P2611-1042",
+   "order_date": "2026-11-05",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "BR-6200-2RS",
+     "qty": 50,
+     "due": "2026-11-15",
+     "planted": []
+    },
+    {
+     "line_no": 2,
+     "part_no": "CT-100-BK",
+     "qty": 100,
+     "due": "2026-11-15",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "WS-M5-SS",
+     "qty": 1200,
+     "due": "2026-11-15",
+     "planted": []
+    },
+    {
+     "line_no": 4,
+     "part_no": "SC-M4016-SS",
+     "qty": 2000,
+     "due": "2026-11-15",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-16.pdf",
+   "layout": "A",
+   "customer": "旭海五金行",
+   "po_no": "PO2611-1045",
+   "order_date": "2026-11-07",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "SC-M3008-SS",
+     "qty": 5000,
+     "due": "2026-12-13",
+     "planted": []
+    },
+    {
+     "line_no": 2,
+     "part_no": "NT-M10-ZN",
+     "qty": 2000,
+     "due": "2026-12-05",
+     "planted": [
+      "fullwidth"
+     ]
+    }
+   ]
+  },
+  {
+   "file": "order-17.pdf",
+   "layout": "B",
+   "customer": "柏昕科技股份有限公司",
+   "po_no": "P2611-1048",
+   "order_date": "2026-11-07",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "WS-M10-SS",
+     "qty": null,
+     "due": "2026-11-26",
+     "planted": [
+      "bad_qty"
+     ]
+    },
+    {
+     "line_no": 2,
+     "part_no": "BR-6202-2RS",
+     "qty": 2000,
+     "due": "2026-11-26",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "BR-6201-2RS",
+     "qty": 50,
+     "due": "2026-12-01",
+     "planted": []
+    },
+    {
+     "line_no": 4,
+     "part_no": "BR-6205-2RS",
+     "qty": 50,
+     "due": "2026-11-30",
+     "planted": []
+    },
+    {
+     "line_no": 5,
+     "part_no": "SC-M6020-SS",
+     "qty": 1000,
+     "due": "2026-11-16",
+     "planted": [
+      "price"
+     ]
+    },
+    {
+     "line_no": 6,
+     "part_no": "OR-P10-NBR",
+     "qty": 1200,
+     "due": "2026-12-18",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-18.xlsx",
+   "layout": "C",
+   "customer": "嘉東工業有限公司",
+   "po_no": "PO2611-1051",
+   "order_date": "2026-11-02",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "CT-200-BK",
+     "qty": 100,
+     "due": "2026-11-30",
+     "planted": []
+    },
+    {
+     "line_no": 2,
+     "part_no": "NT-M5-ZN",
+     "qty": 5000,
+     "due": "2026-11-27",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "WS-M4-SS",
+     "qty": 1200,
+     "due": "2026-11-09",
+     "planted": []
+    },
+    {
+     "line_no": 4,
+     "part_no": "WS-M8-SS",
+     "qty": 2000,
+     "due": "2026-11-12",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-19.xlsx",
+   "layout": "D",
+   "customer": "禾臻精密股份有限公司",
+   "po_no": "P2611-1054",
+   "order_date": "2026-11-05",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "SC-M3008-SS",
+     "qty": 5000,
+     "due": "2026-11-28",
+     "planted": [
+      "wrong_valid"
+     ]
+    },
+    {
+     "line_no": 2,
+     "part_no": "SC-M6030-SS",
+     "qty": 5000,
+     "due": "2026-11-13",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-20.xlsx",
+   "layout": "C",
+   "customer": "鉅暘機械有限公司",
+   "po_no": "PO2611-1057",
+   "order_date": "2026-11-06",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "SC-M8025-SS",
+     "qty": 2000,
+     "due": "2026-11-26",
+     "planted": []
+    },
+    {
+     "line_no": 2,
+     "part_no": "SC-M4016-SS",
+     "qty": 200,
+     "due": "2026-12-04",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "WS-M10-SS",
+     "qty": 300,
+     "due": "2026-11-28",
+     "planted": []
+    },
+    {
+     "line_no": 4,
+     "part_no": "BR-6205-2RS",
+     "qty": 100,
+     "due": "2026-11-20",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-21.pdf",
+   "layout": "A",
+   "customer": "昇揚自動化股份有限公司",
+   "po_no": "P2611-1060",
+   "order_date": "2026-11-05",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "WS-M4-SS",
+     "qty": 1000,
+     "due": "2026-11-17",
+     "planted": []
+    },
+    {
+     "line_no": 2,
+     "part_no": "WS-M3-SS",
+     "qty": 300,
+     "due": "2026-11-16",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-22.pdf",
+   "layout": "B",
+   "customer": "旭海五金行",
+   "po_no": "PO2611-1063",
+   "order_date": "2026-11-05",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "SC-M6030-SS",
+     "qty": 5000,
+     "due": "2026-12-16",
+     "planted": [
+      "fullwidth"
+     ]
+    },
+    {
+     "line_no": 2,
+     "part_no": "NT-M3-ZN",
+     "qty": 300,
+     "due": "2026-11-15",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-23.xlsx",
+   "layout": "C",
+   "customer": "柏昕科技股份有限公司",
+   "po_no": "P2611-1066",
+   "order_date": "2026-11-06",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "BR-6205-2RS",
+     "qty": 500,
+     "due": null,
+     "planted": [
+      "no_due"
+     ]
+    },
+    {
+     "line_no": 2,
+     "part_no": "SC-M5025-SS",
+     "qty": 1200,
+     "due": "2026-12-09",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "WS-M6-SS",
+     "qty": 1200,
+     "due": "2026-11-14",
+     "planted": []
+    },
+    {
+     "line_no": 4,
+     "part_no": "NT-M8-ZN",
+     "qty": 100,
+     "due": "2026-12-09",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-24.xlsx",
+   "layout": "D",
+   "customer": "嘉東工業有限公司",
+   "po_no": "PO2611-1069",
+   "order_date": "2026-11-03",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "SC-M5025-SS",
+     "qty": 100,
+     "due": "2026-12-14",
+     "planted": []
+    },
+    {
+     "line_no": 2,
+     "part_no": "NT-M6-ZN",
+     "qty": 200,
+     "due": "2026-12-03",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "OR-P10-NBR",
+     "qty": 5000,
+     "due": "2026-12-11",
+     "planted": []
+    },
+    {
+     "line_no": 4,
+     "part_no": "BR-6202-2RS",
+     "qty": 2000,
+     "due": "2026-12-12",
+     "planted": []
+    },
+    {
+     "line_no": 5,
+     "part_no": "NT-M8-ZN",
+     "qty": 300,
+     "due": "2026-11-14",
+     "planted": []
+    },
+    {
+     "line_no": 6,
+     "part_no": "BR-6204-2RS",
+     "qty": 1200,
+     "due": "2026-11-30",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-25.pdf",
+   "layout": "E",
+   "customer": "禾臻精密股份有限公司",
+   "po_no": "P2611-1072",
+   "order_date": "2026-11-02",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "BR-6200-2RS",
+     "qty": 50,
+     "due": "2026-11-16",
+     "planted": []
+    },
+    {
+     "line_no": 2,
+     "part_no": "BR-6202-2RS",
+     "qty": 50,
+     "due": "2026-11-16",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "NT-M8-ZN",
+     "qty": 500,
+     "due": "2026-11-16",
+     "planted": []
+    },
+    {
+     "line_no": 4,
+     "part_no": "CT-150-BK",
+     "qty": 50,
+     "due": "2026-11-16",
+     "planted": []
+    },
+    {
+     "line_no": 5,
+     "part_no": "NT-M10-ZN",
+     "qty": 1200,
+     "due": "2026-11-16",
+     "planted": []
+    },
+    {
+     "line_no": 6,
+     "part_no": "WS-M8-SS",
+     "qty": 5000,
+     "due": "2026-11-16",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-26.xlsx",
+   "layout": "C",
+   "customer": "鉅暘機械有限公司",
+   "po_no": "PO2611-1075",
+   "order_date": "2026-11-04",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "BR-6205-2RS",
+     "qty": 2000,
+     "due": "2026-12-03",
+     "planted": []
+    },
+    {
+     "line_no": 2,
+     "part_no": "WS-M4-SS",
+     "qty": 500,
+     "due": "2026-12-06",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "SC-M6030-SS",
+     "qty": 200,
+     "due": "2026-12-10",
+     "planted": []
+    },
+    {
+     "line_no": 4,
+     "part_no": "WS-M6-SS",
+     "qty": 200,
+     "due": "2026-12-01",
+     "planted": []
+    },
+    {
+     "line_no": 5,
+     "part_no": "NT-M4-ZN",
+     "qty": 500,
+     "due": "2026-11-16",
+     "planted": []
+    },
+    {
+     "line_no": 6,
+     "part_no": "SC-M4020-SS",
+     "qty": 1200,
+     "due": "2026-11-30",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-27.pdf",
+   "layout": "B",
+   "customer": "昇揚自動化股份有限公司",
+   "po_no": "P2611-1078",
+   "order_date": "2026-11-08",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "WS-M3-SS",
+     "qty": 1000,
+     "due": "2026-11-18",
+     "planted": []
+    },
+    {
+     "line_no": 2,
+     "part_no": "SC-M8040-SS",
+     "qty": 200,
+     "due": "2026-11-21",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "SC-M4020-SS",
+     "qty": 500,
+     "due": "2026-12-11",
+     "planted": [
+      "price"
+     ]
+    },
+    {
+     "line_no": 4,
+     "part_no": "OR-P16-NBR",
+     "qty": 5000,
+     "due": "2026-11-20",
+     "planted": []
+    },
+    {
+     "line_no": 5,
+     "part_no": "BR-6203-2RS",
+     "qty": 300,
+     "due": "2026-12-19",
+     "planted": [
+      "normalized"
+     ]
+    },
+    {
+     "line_no": 6,
+     "part_no": "SC-M6030-SS",
+     "qty": 5000,
+     "due": "2026-12-05",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-28.xlsx",
+   "layout": "C",
+   "customer": "旭海五金行",
+   "po_no": "PO2611-1081",
+   "order_date": "2026-11-10",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "NT-M4-ZN",
+     "qty": 1000,
+     "due": "2026-12-05",
+     "planted": []
+    },
+    {
+     "line_no": 2,
+     "part_no": "CT-150-BK",
+     "qty": 1000,
+     "due": "2026-12-14",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "BR-6204-2RS",
+     "qty": 2000,
+     "due": "2026-11-29",
+     "planted": []
+    },
+    {
+     "line_no": 4,
+     "part_no": "OR-P20-NBR",
+     "qty": 2000,
+     "due": "2026-11-19",
+     "planted": []
+    },
+    {
+     "line_no": 5,
+     "part_no": "SC-M5016-SS",
+     "qty": 2000,
+     "due": "2026-12-11",
+     "planted": [
+      "wrong_valid"
+     ]
+    }
+   ]
+  },
+  {
+   "file": "order-29.xlsx",
+   "layout": "D",
+   "customer": "柏昕科技股份有限公司",
+   "po_no": "P2611-1084",
+   "order_date": "2026-11-09",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "SC-M6020-SS",
+     "qty": 300,
+     "due": "2026-12-20",
+     "planted": [
+      "typo"
+     ]
+    },
+    {
+     "line_no": 2,
+     "part_no": "NT-M8-ZN",
+     "qty": 50,
+     "due": "2026-11-26",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "BR-6203-2RS",
+     "qty": 5000,
+     "due": "2026-12-15",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-30.pdf",
+   "layout": "E",
+   "customer": "嘉東工業有限公司",
+   "po_no": "PO2611-1087",
+   "order_date": "2026-11-03",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "SC-M5016-SS",
+     "qty": 300,
+     "due": "2026-12-09",
+     "planted": [
+      "normalized"
+     ]
+    },
+    {
+     "line_no": 2,
+     "part_no": "WS-M4-SS",
+     "qty": 500,
+     "due": "2026-12-09",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "CT-300-BK",
+     "qty": 200,
+     "due": "2026-12-09",
+     "planted": []
+    },
+    {
+     "line_no": 4,
+     "part_no": "BR-6202-2RS",
+     "qty": 5000,
+     "due": "2026-12-09",
+     "planted": [
+      "fullwidth"
+     ]
+    },
+    {
+     "line_no": 5,
+     "part_no": "WS-M10-SS",
+     "qty": 300,
+     "due": "2026-12-09",
+     "planted": []
+    },
+    {
+     "line_no": 6,
+     "part_no": "WS-M3-SS",
+     "qty": 300,
+     "due": "2026-12-09",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-31.pdf",
+   "layout": "A",
+   "customer": "禾臻精密股份有限公司",
+   "po_no": "P2611-1090",
+   "order_date": "2026-11-08",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "NT-M3-ZN",
+     "qty": 300,
+     "due": "2026-11-20",
+     "planted": []
+    },
+    {
+     "line_no": 2,
+     "part_no": "CT-100-BK",
+     "qty": 5000,
+     "due": "2026-12-20",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "SC-M3012-SS",
+     "qty": 300,
+     "due": "2026-11-18",
+     "planted": []
+    },
+    {
+     "line_no": 4,
+     "part_no": "CT-200-BK",
+     "qty": 2000,
+     "due": "2026-12-12",
+     "planted": []
+    },
+    {
+     "line_no": 5,
+     "part_no": "BR-6205-2RS",
+     "qty": 100,
+     "due": null,
+     "planted": [
+      "no_due"
+     ]
+    }
+   ]
+  },
+  {
+   "file": "order-32.xlsx",
+   "layout": "C",
+   "customer": "鉅暘機械有限公司",
+   "po_no": "PO2611-1093",
+   "order_date": "2026-11-06",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "NT-M4-ZN",
+     "qty": 300,
+     "due": "2026-12-05",
+     "planted": []
+    },
+    {
+     "line_no": 2,
+     "part_no": "CT-200-BK",
+     "qty": 1000,
+     "due": "2026-12-20",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "CT-150-BK",
+     "qty": 200,
+     "due": "2026-11-22",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-33.xlsx",
+   "layout": "C",
+   "customer": "昇揚自動化股份有限公司",
+   "po_no": "P2611-1096",
+   "order_date": "2026-11-04",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "SC-M6020-SS",
+     "qty": 100,
+     "due": null,
+     "planted": [
+      "due_before"
+     ]
+    },
+    {
+     "line_no": 2,
+     "part_no": "CT-150-BK",
+     "qty": 1200,
+     "due": "2026-12-16",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-34.xlsx",
+   "layout": "D",
+   "customer": "旭海五金行",
+   "po_no": "PO2611-1099",
+   "order_date": "2026-11-08",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "SC-M6030-SS",
+     "qty": 500,
+     "due": "2026-12-17",
+     "planted": []
+    },
+    {
+     "line_no": 2,
+     "part_no": "SC-M3008-SS",
+     "qty": 500,
+     "due": "2026-12-12",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "WS-M8-SS",
+     "qty": 5000,
+     "due": "2026-11-19",
+     "planted": [
+      "pack"
+     ]
+    }
+   ]
+  },
+  {
+   "file": "order-35.pdf",
+   "layout": "E",
+   "customer": "柏昕科技股份有限公司",
+   "po_no": "P2611-1102",
+   "order_date": "2026-11-09",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "WS-M6-SS",
+     "qty": 5000,
+     "due": "2026-11-26",
+     "planted": []
+    },
+    {
+     "line_no": 2,
+     "part_no": "SC-M5025-SS",
+     "qty": 1200,
+     "due": "2026-11-26",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "BR-6202-2RS",
+     "qty": 5000,
+     "due": "2026-11-26",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-36.pdf",
+   "layout": "A",
+   "customer": "嘉東工業有限公司",
+   "po_no": "PO2611-1105",
+   "order_date": "2026-11-05",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "WS-M3-SS",
+     "qty": 1000,
+     "due": "2026-12-05",
+     "planted": [
+      "normalized"
+     ]
+    },
+    {
+     "line_no": 2,
+     "part_no": "SC-M3008-SS",
+     "qty": 1000,
+     "due": "2026-11-25",
+     "planted": [
+      "typo"
+     ]
+    },
+    {
+     "line_no": 3,
+     "part_no": "NT-M5-ZN",
+     "qty": 100,
+     "due": "2026-12-05",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-37.pdf",
+   "layout": "B",
+   "customer": "禾臻精密股份有限公司",
+   "po_no": "P2611-1108",
+   "order_date": "2026-11-10",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": null,
+     "qty": 1200,
+     "due": "2026-11-28",
+     "planted": [
+      "inactive"
+     ]
+    },
+    {
+     "line_no": 2,
+     "part_no": "SC-M8040-SS",
+     "qty": 5000,
+     "due": "2026-12-12",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "BR-6202-2RS",
+     "qty": 200,
+     "due": null,
+     "planted": [
+      "no_due"
+     ]
+    },
+    {
+     "line_no": 4,
+     "part_no": "WS-M3-SS",
+     "qty": 1000,
+     "due": "2026-11-24",
+     "planted": [
+      "pack"
+     ]
+    },
+    {
+     "line_no": 5,
+     "part_no": "OR-P10-NBR",
+     "qty": 500,
+     "due": "2026-12-17",
+     "planted": [
+      "pack"
+     ]
+    },
+    {
+     "line_no": 6,
+     "part_no": "SC-M8025-SS",
+     "qty": 50,
+     "due": "2026-12-06",
+     "planted": [
+      "normalized"
+     ]
+    }
+   ]
+  },
+  {
+   "file": "order-38.xlsx",
+   "layout": "C",
+   "customer": "鉅暘機械有限公司",
+   "po_no": "PO2611-1111",
+   "order_date": "2026-11-06",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "WS-M6-SS",
+     "qty": 5000,
+     "due": "2026-11-26",
+     "planted": []
+    },
+    {
+     "line_no": 2,
+     "part_no": "SC-M5025-SS",
+     "qty": 1000,
+     "due": "2026-11-14",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "CT-150-BK",
+     "qty": 2000,
+     "due": "2026-12-16",
+     "planted": []
+    },
+    {
+     "line_no": 4,
+     "part_no": "SC-M3012-SS",
+     "qty": 500,
+     "due": "2026-11-25",
+     "planted": []
+    },
+    {
+     "line_no": 5,
+     "part_no": "WS-M4-SS",
+     "qty": 300,
+     "due": "2026-12-17",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-39.xlsx",
+   "layout": "D",
+   "customer": "昇揚自動化股份有限公司",
+   "po_no": "P2611-1114",
+   "order_date": "2026-11-04",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "SC-M3008-SS",
+     "qty": 1200,
+     "due": "2026-12-06",
+     "planted": []
+    },
+    {
+     "line_no": 2,
+     "part_no": "BR-6204-2RS",
+     "qty": 500,
+     "due": "2026-11-27",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "SC-M6020-SS",
+     "qty": 1000,
+     "due": "2026-11-17",
+     "planted": []
+    },
+    {
+     "line_no": 4,
+     "part_no": "OR-P20-NBR",
+     "qty": 50,
+     "due": "2026-12-03",
+     "planted": []
+    },
+    {
+     "line_no": 5,
+     "part_no": "WS-M8-SS",
+     "qty": null,
+     "due": "2026-11-29",
+     "planted": [
+      "dozen"
+     ]
+    },
+    {
+     "line_no": 6,
+     "part_no": "SC-M4016-SS",
+     "qty": 5000,
+     "due": "2026-12-04",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-40.pdf",
+   "layout": "E",
+   "customer": "旭海五金行",
+   "po_no": "PO2611-1117",
+   "order_date": "2026-11-10",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "OR-P10-NBR",
+     "qty": 1000,
+     "due": "2026-12-05",
+     "planted": [
+      "pack"
+     ]
+    },
+    {
+     "line_no": 2,
+     "part_no": "SC-M4016-SS",
+     "qty": 5000,
+     "due": "2026-12-05",
+     "planted": [
+      "normalized"
+     ]
+    },
+    {
+     "line_no": 3,
+     "part_no": "SC-M4020-SS",
+     "qty": 100,
+     "due": "2026-12-05",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-41.pdf",
+   "layout": "A",
+   "customer": "柏昕科技股份有限公司",
+   "po_no": "P2611-1120",
+   "order_date": "2026-11-10",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "WS-M3-SS",
+     "qty": 1000,
+     "due": "2026-12-23",
+     "planted": []
+    },
+    {
+     "line_no": 2,
+     "part_no": "WS-M4-SS",
+     "qty": 500,
+     "due": "2026-12-12",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "SC-M4012-SS",
+     "qty": 50,
+     "due": "2026-12-18",
+     "planted": []
+    },
+    {
+     "line_no": 4,
+     "part_no": "NT-M8-ZN",
+     "qty": 1200,
+     "due": "2026-11-30",
+     "planted": []
+    },
+    {
+     "line_no": 5,
+     "part_no": "BR-6205-2RS",
+     "qty": 50,
+     "due": "2026-12-13",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-42.pdf",
+   "layout": "B",
+   "customer": "嘉東工業有限公司",
+   "po_no": "PO2611-1123",
+   "order_date": "2026-11-02",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "SC-M4012-SS",
+     "qty": 100,
+     "due": "2026-11-18",
+     "planted": []
+    },
+    {
+     "line_no": 2,
+     "part_no": "CT-150-BK",
+     "qty": 1200,
+     "due": "2026-11-30",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "SC-M4020-SS",
+     "qty": 2000,
+     "due": "2026-11-30",
+     "planted": []
+    },
+    {
+     "line_no": 4,
+     "part_no": "SC-M3008-SS",
+     "qty": 1000,
+     "due": "2026-12-15",
+     "planted": [
+      "pack"
+     ]
+    },
+    {
+     "line_no": 5,
+     "part_no": "SC-M6020-SS",
+     "qty": 200,
+     "due": "2026-12-05",
+     "planted": [
+      "typo"
+     ]
+    }
+   ]
+  },
+  {
+   "file": "order-43.xlsx",
+   "layout": "C",
+   "customer": "禾臻精密股份有限公司",
+   "po_no": "P2611-1126",
+   "order_date": "2026-11-03",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "SC-M5025-SS",
+     "qty": 1000,
+     "due": "2026-11-30",
+     "planted": []
+    },
+    {
+     "line_no": 2,
+     "part_no": "SC-M4012-SS",
+     "qty": 5000,
+     "due": "2026-11-19",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "OR-P25-NBR",
+     "qty": 5000,
+     "due": "2026-11-12",
+     "planted": []
+    },
+    {
+     "line_no": 4,
+     "part_no": "OR-P10-NBR",
+     "qty": 300,
+     "due": "2026-12-08",
+     "planted": []
+    },
+    {
+     "line_no": 5,
+     "part_no": "WS-M4-SS",
+     "qty": 5000,
+     "due": "2026-11-27",
+     "planted": []
+    },
+    {
+     "line_no": 6,
+     "part_no": "NT-M10-ZN",
+     "qty": 300,
+     "due": "2026-11-23",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-44.xlsx",
+   "layout": "C",
+   "customer": "鉅暘機械有限公司",
+   "po_no": "PO2611-1129",
+   "order_date": "2026-11-08",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "BR-6203-2RS",
+     "qty": 1200,
+     "due": "2026-12-12",
+     "planted": []
+    },
+    {
+     "line_no": 2,
+     "part_no": "NT-M6-ZN",
+     "qty": 5000,
+     "due": "2026-11-28",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "WS-M8-SS",
+     "qty": null,
+     "due": "2026-12-04",
+     "planted": [
+      "dozen"
+     ]
+    },
+    {
+     "line_no": 4,
+     "part_no": "SC-M8040-SS",
+     "qty": 50,
+     "due": "2026-11-18",
+     "planted": []
+    },
+    {
+     "line_no": 5,
+     "part_no": "SC-M6030-SS",
+     "qty": 1200,
+     "due": "2026-12-21",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-45.pdf",
+   "layout": "E",
+   "customer": "昇揚自動化股份有限公司",
+   "po_no": "P2611-1132",
+   "order_date": "2026-11-06",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "WS-M10-SS",
+     "qty": 5000,
+     "due": "2026-11-22",
+     "planted": []
+    },
+    {
+     "line_no": 2,
+     "part_no": "CT-100-BK",
+     "qty": 1000,
+     "due": "2026-11-22",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "NT-M5-ZN",
+     "qty": 50,
+     "due": "2026-11-22",
+     "planted": []
+    },
+    {
+     "line_no": 4,
+     "part_no": "WS-M4-SS",
+     "qty": 1000,
+     "due": "2026-11-22",
+     "planted": []
+    },
+    {
+     "line_no": 5,
+     "part_no": "SC-M5025-SS",
+     "qty": 50,
+     "due": "2026-11-22",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-46.pdf",
+   "layout": "A",
+   "customer": "旭海五金行",
+   "po_no": "PO2611-1135",
+   "order_date": "2026-11-05",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "BR-6204-2RS",
+     "qty": 100,
+     "due": "2026-11-20",
+     "planted": []
+    },
+    {
+     "line_no": 2,
+     "part_no": "SC-M6020-SS",
+     "qty": 5000,
+     "due": "2026-11-24",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "CT-300-BK",
+     "qty": 200,
+     "due": null,
+     "planted": [
+      "due_before"
+     ]
+    },
+    {
+     "line_no": 4,
+     "part_no": "OR-P16-NBR",
+     "qty": 5000,
+     "due": "2026-11-18",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-47.pdf",
+   "layout": "B",
+   "customer": "柏昕科技股份有限公司",
+   "po_no": "P2611-1138",
+   "order_date": "2026-11-03",
+   "expect": "review",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "SC-M3008-SS",
+     "qty": 5000,
+     "due": "2026-12-07",
+     "planted": []
+    },
+    {
+     "line_no": 2,
+     "part_no": "SC-M8040-SS",
+     "qty": 300,
+     "due": "2026-11-23",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "SC-M4012-SS",
+     "qty": 2000,
+     "due": "2026-11-30",
+     "planted": []
+    },
+    {
+     "line_no": 4,
+     "part_no": "CT-200-BK",
+     "qty": 50,
+     "due": "2026-11-30",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-48.xlsx",
+   "layout": "C",
+   "customer": "嘉東工業有限公司",
+   "po_no": "PO2611-1015",
+   "order_date": "2026-11-04",
+   "expect": "duplicate",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "SC-M4016-SS",
+     "qty": 1200,
+     "due": "2026-12-18",
+     "planted": []
+    },
+    {
+     "line_no": 2,
+     "part_no": "NT-M10-ZN",
+     "qty": 100,
+     "due": "2026-11-23",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "WS-M10-SS",
+     "qty": 1200,
+     "due": "2026-12-17",
+     "planted": []
+    },
+    {
+     "line_no": 4,
+     "part_no": "NT-M6-ZN",
+     "qty": 2000,
+     "due": "2026-11-14",
+     "planted": []
+    },
+    {
+     "line_no": 5,
+     "part_no": "NT-M5-ZN",
+     "qty": 5000,
+     "due": "2026-11-19",
+     "planted": []
+    },
+    {
+     "line_no": 6,
+     "part_no": "SC-M5025-SS",
+     "qty": 50,
+     "due": "2026-12-10",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-49.xlsx",
+   "layout": "C",
+   "customer": "禾臻精密股份有限公司",
+   "po_no": "P2611-1036",
+   "order_date": "2026-11-02",
+   "expect": "duplicate",
+   "lines": [
+    {
+     "line_no": 1,
+     "part_no": "WS-M10-SS",
+     "qty": 5000,
+     "due": "2026-12-03",
+     "planted": [
+      "pack"
+     ]
+    },
+    {
+     "line_no": 2,
+     "part_no": "BR-6200-2RS",
+     "qty": 100,
+     "due": "2026-11-19",
+     "planted": []
+    },
+    {
+     "line_no": 3,
+     "part_no": "SC-M4020-SS",
+     "qty": 2000,
+     "due": "2026-11-09",
+     "planted": []
+    },
+    {
+     "line_no": 4,
+     "part_no": "CT-100-BK",
+     "qty": 300,
+     "due": "2026-11-21",
+     "planted": []
+    }
+   ]
+  },
+  {
+   "file": "order-50.pdf",
+   "layout": "scan",
+   "expect": "handoff",
+   "lines": []
+  }
+ ]
+}
