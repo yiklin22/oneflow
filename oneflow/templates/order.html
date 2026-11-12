@@ -1,0 +1,44 @@
+{% extends "base.html" %}{% from "_macros.html" import history_table, issues %}{% block main %}
+{% set open = order.status in ("needs_review", "duplicate", "handoff") %}
+<h1>訂單 #{{ order.id }} <span class="tag">{{ STATUS[order.status] }}</span></h1>
+{% if order.status == "duplicate" %}<div class="card"><p class="bad">客戶與單號和 <a href="/orders/{{ order.duplicate_of }}">訂單 #{{ order.duplicate_of }}</a> 相同，可能是重送。不能確認。</p>
+<form class="inline" method="post" action="/orders/{{ order.id }}/release"><input name="reason" required placeholder="確定是另一張訂單的原因"><button class="plain">解除重複標記</button></form></div>{% endif %}
+{% if order.status == "handoff" %}<p class="err">程式無法讀取這個檔案，需人工輸入 ERP。請到「人工接手」結案。</p>{% endif %}
+<div class="two">
+<section class="card"><h2 style="margin-top:0">原文：{{ order.source.filename }}</h2>
+{% if order.source.text %}<div class="src">{% for line in source_lines %}<div class="{{ 'hit' if loop.index0 in marked }}"><span class="n">{% if loop.index0 in marked %}第 {{ marked[loop.index0] }} 項{% endif %}</span>{{ line }}</div>{% endfor %}</div>
+{% else %}<p class="soft">這個檔案沒有可讀的文字。</p>{% endif %}
+</section>
+<section class="card"><h2 style="margin-top:0">讀取結果</h2>
+{{ issues(order.issues) }}
+<table>
+{% for field, label, value in (("customer", "客戶", order.customer), ("po_no", "客戶單號", order.po_no), ("order_date", "訂單日期", order.order_date)) %}
+<tr><th>{{ label }}</th><td>{% if open %}<form class="inline" method="post" action="/orders/{{ order.id }}/edit"><input type="hidden" name="field" value="{{ field }}">
+<input name="value" value="{{ value or '' }}" aria-label="{{ label }}"><button class="plain">存</button></form>{% else %}{{ value }}{% endif %}</td></tr>
+{% endfor %}
+</table>
+{% for l in order.lines %}
+<div style="border-top:1px solid var(--line);margin-top:.8rem;padding-top:.6rem">
+<strong>第 {{ l.line_no }} 項</strong>
+<span class="soft">原文：{{ l.raw.part }}｜{{ l.raw.name }}｜{{ l.raw.qty }} {{ l.raw.unit }}｜{{ l.raw.due }}{% if l.raw.price %}｜單價 {{ l.raw.price }}{% endif %}</span>
+{{ issues(l.issues) }}
+{% if open %}
+{% for field, label, value in (("part_no", "料號", l.part_no), ("qty", "數量", l.qty|int if l.qty is not none else ""), ("due_date", "交期", l.due_date)) %}
+<form class="inline" method="post" action="/orders/lines/{{ l.id }}/edit"><input type="hidden" name="field" value="{{ field }}">
+<label>{{ label }} <input name="value" value="{{ value if value is not none else '' }}" size="{{ 16 if field == 'part_no' else 10 }}" {% if field == "part_no" %}list="c{{ l.id }}"{% endif %}></label><button class="plain">存</button></form>
+{% endfor %}
+<datalist id="c{{ l.id }}">{% for c in l.candidates %}<option value="{{ c }}">{{ products[c].name }}</option>{% endfor %}</datalist>
+{% if l.candidates %}<div class="soft">相近的料號（不會自動採用）：{% for c in l.candidates %}{{ c }} {{ products[c].name }}{{ "；" if not loop.last }}{% endfor %}</div>{% endif %}
+{% else %}<div>料號 {{ l.part_no }}｜數量 {{ l.qty|int }}｜交期 {{ l.due_date }}</div>{% endif %}
+{% if l.part_no %}<div class="soft">商品表：{{ products[l.part_no].name }}（單位 {{ products[l.part_no].unit }}）</div>{% endif %}
+</div>
+{% endfor %}
+{% if order.status == "needs_review" %}
+<form method="post" action="/orders/{{ order.id }}/confirm" style="margin-top:1rem">
+<button {{ "disabled" if blocking }}>確認這張訂單</button>
+{% if blocking %}<span class="bad">還有 {{ blocking|length }} 個必須處理的問題</span>{% else %}<span class="soft">確認後才會出現在匯出檔。</span>{% endif %}
+</form>{% endif %}
+</section>
+</div>
+{{ history_table(history, names) }}
+{% endblock %}

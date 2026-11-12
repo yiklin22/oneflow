@@ -1,0 +1,30 @@
+{% extends "base.html" %}{% from "_macros.html" import data_fields %}{% block main %}
+<h1>訂單輸入助手</h1>
+<div class="grid">
+<form class="card" method="post" action="/orders/upload" enctype="multipart/form-data">
+<h2 style="margin-top:0">上傳訂單（PDF 或 Excel）</h2>
+<p><input type="file" name="files" multiple required accept=".pdf,.xlsx"></p><p>{{ data_fields(consents) }}</p><button>讀取</button>
+<p class="soft">同一個檔案上傳兩次只會處理一次。</p>
+</form>
+<form class="card" method="post" action="/orders/tables" enctype="multipart/form-data">
+<h2 style="margin-top:0">商品表與客戶料號表</h2>
+<p class="soft">目前商品表有 {{ products }} 個料號。請先匯入商品表再上傳訂單。</p>
+<p><input type="file" name="file" required accept=".csv,.xlsx"></p>
+<p><label><select name="kind"><option value="products">商品表（料號、品名、單位…）</option><option value="customer_parts">客戶料號表（客戶、客戶料號、料號）</option></select></label></p>
+<button>匯入</button>
+</form>
+<div class="card"><h2 style="margin-top:0">匯出 ERP 格式</h2>
+<form method="post" action="/orders-export"><button>匯出已確認的訂單</button></form>
+<p class="soft">只匯出人工確認過的訂單，每張只匯出一次。本系統不出貨、不改價、不寫入正式帳。</p>
+{% for b in batches %}<div>批次 {{ b.id }}（{{ b.order_count }} 張，{{ b.created_at|taipei }}）
+<a href="/orders-export/{{ b.id }}.csv">UTF-8</a>｜<a href="/orders-export/{{ b.id }}.csv?encoding=big5">Big5</a></div>{% endfor %}
+</div>
+</div>
+<div class="scroll"><table><tr><th>編號</th><th>客戶</th><th>客戶單號</th><th>訂單日期</th><th>項數</th><th>狀態</th><th>待處理</th><th>來源檔</th></tr>
+{% for o in rows %}{% set b = blocking(o) %}<tr><td><a href="/orders/{{ o.id }}">#{{ o.id }}</a></td><td>{{ o.customer or "—" }}</td><td>{{ o.po_no or "—" }}</td>
+<td>{{ o.order_date or "—" }}</td><td class="num">{{ o.lines|length }}</td><td><span class="tag">{{ STATUS[o.status] }}</span></td>
+<td>{% if o.status == "needs_review" %}{% if b %}<span class="bad">{{ b|length }} 個必須處理</span>{% else %}<span class="soft">可直接確認</span>{% endif %}{% endif %}</td>
+<td class="soft">{{ o.source.filename }}{% if o.source.data_class == "real" %} <span class="tag">真實</span>{% endif %}</td></tr>
+{% else %}<tr><td colspan="8" class="soft">還沒有訂單。</td></tr>{% endfor %}
+</table></div>
+{% endblock %}

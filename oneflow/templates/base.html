@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}後勤助手{% endblock %}</title>
+<style>
+:root { --ink:#1f2933; --soft:#5b6770; --line:#d5dbe1; --bg:#f6f7f9; --card:#fff; --accent:#0b5cad; --bad:#b42318; --warn:#9a6700; --good:#1a7f37; }
+* { box-sizing: border-box; }
+body { margin:0; font:16px/1.6 "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif; color:var(--ink); background:var(--bg); }
+nav { display:flex; flex-wrap:wrap; gap:.25rem 1rem; align-items:center; padding:.6rem 1rem; background:var(--card); border-bottom:1px solid var(--line); }
+nav a { color:var(--accent); text-decoration:none; padding:.2rem 0; } nav .who { margin-left:auto; color:var(--soft); display:flex; gap:.6rem; align-items:center; }
+main { max-width:1200px; margin:0 auto; padding:1rem; }
+h1 { font-size:1.4rem; margin:.4rem 0 1rem; } h2 { font-size:1.1rem; margin:1.4rem 0 .5rem; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:1rem; margin-bottom:1rem; }
+.grid { display:grid; gap:1rem; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); }
+.two { display:grid; gap:1rem; grid-template-columns:minmax(0,1fr) minmax(0,1.3fr); } @media (max-width:800px) { .two { grid-template-columns:1fr; } }
+.scroll { overflow-x:auto; } table { border-collapse:collapse; width:100%; font-size:.93rem; }
+th, td { text-align:left; padding:.4rem .5rem; border-bottom:1px solid var(--line); vertical-align:top; } th { color:var(--soft); font-weight:600; white-space:nowrap; }
+.ok, .err { padding:.6rem .8rem; border-radius:6px; } .ok { background:#e6f4ea; color:var(--good); } .err { background:#fdecea; color:var(--bad); }
+.bad { color:var(--bad); } .warn { color:var(--warn); } .soft { color:var(--soft); } .num { text-align:right; font-variant-numeric:tabular-nums; }
+.tag { display:inline-block; padding:0 .5rem; border-radius:999px; border:1px solid var(--line); font-size:.85rem; white-space:nowrap; background:var(--card); }
+form.inline { display:inline-flex; gap:.3rem; flex-wrap:wrap; align-items:center; margin:.15rem 0; }
+input, select, textarea, button { font:inherit; padding:.3rem .5rem; border:1px solid var(--line); border-radius:6px; background:#fff; color:var(--ink); max-width:100%; }
+textarea { width:100%; min-height:9rem; } button { background:var(--accent); color:#fff; border-color:var(--accent); cursor:pointer; } button.plain { background:#fff; color:var(--accent); }
+label { display:inline-flex; gap:.3rem; align-items:center; flex-wrap:wrap; }
+pre, .src { font:.9rem/1.5 ui-monospace,"Noto Sans Mono CJK TC",monospace; white-space:pre-wrap; word-break:break-word; margin:0; }
+.src div { padding:0 .4rem; border-left:3px solid transparent; } .src .hit { background:#fff8c5; border-left-color:var(--warn); }
+.src .n { color:var(--soft); display:inline-block; min-width:4.5em; font-size:.8rem; }
+.msg { max-width:85%; padding:.4rem .7rem; border-radius:10px; margin:.3rem 0; background:#eef2f6; } .msg.out { margin-left:auto; background:#e3f0ff; }
+ul.flat { margin:.2rem 0; padding-left:1.1rem; }
+</style>
+</head>
+<body>
+{% if user %}
+<nav>
+  <a href="/"><strong>後勤助手</strong></a>
+  {% for flow, name in FLOWS.items() %}{% if may(user, flow) %}<a href="/{{ flow }}">{{ name }}</a>{% endif %}{% endfor %}
+  <a href="/handoffs">人工接手</a><a href="/consents">資料使用同意</a><a href="/changes">修改紀錄</a>
+  <span class="who">{{ user.name }}（{{ ROLES[user.role] }}）<form method="post" action="/logout"><button class="plain">登出</button></form></span>
+</nav>
+{% endif %}
+<main>
+{% if ok %}<p class="ok" role="status">{{ ok }}</p>{% endif %}
+{% if error %}<p class="err" role="alert">{{ error }}</p>{% endif %}
+{% block main %}{% endblock %}
+</main>
+</body>
+</html>

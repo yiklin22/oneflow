@@ -1,0 +1,30 @@
+{% extends "base.html" %}{% from "_macros.html" import history_table %}{% block main %}
+<h1>{{ item.customer }}｜{{ item.invoice_no or "（無發票號碼）" }}</h1>
+<div class="two">
+<section class="card"><h2 style="margin-top:0">原文</h2>
+<p class="soft">匯出檔第 {{ item.row_no }} 列</p><pre>{{ item.row_text }}</pre>
+<h2>相關來信（{{ signals|length }}）</h2>
+{% for s in signals %}<div style="border-top:1px solid var(--line);padding:.5rem 0">
+<div><span class="tag">{{ HOLD[s.kind] }}</span> {{ s.mail.sent_at|taipei }}｜{{ s.mail.sender }}｜{{ s.mail.subject }}
+<span class="soft">（{{ {"invoice_no": "信中有這張發票號碼", "sender": "依寄件人歸到這個客戶", "manual": "人工歸戶"}.get(s.linked_by, "") }}{% if s.id <= item.hold_cleared_upto %}，已看過{% endif %}）</span></div>
+<div class="warn">判斷依據：{{ s.evidence }}</div><pre>{{ s.mail.body }}</pre></div>
+{% else %}<p class="soft">沒有相關來信。</p>{% endfor %}
+</section>
+<section class="card"><h2 style="margin-top:0">整理結果（基準日 {{ as_of }}）</h2>
+<table>
+<tr><th>發票日期</th><td>{{ item.invoice_date or "—" }}</td></tr><tr><th>到期日</th><td>{{ item.due_date or "—" }}</td></tr>
+<tr><th>發票金額</th><td>{{ item.amount|money }}</td></tr><tr><th>已收金額</th><td>{{ item.received|money }}</td></tr>
+<tr><th>未收餘額</th><td>{{ balance|money }}</td></tr><tr><th>逾期天數</th><td>{{ days or "未逾期、已收清或無法判斷" }}</td></tr>
+<tr><th>聯絡信箱</th><td>{{ item.contact_email or "—" }}</td></tr>
+</table>
+{% for i in item.issues %}<div class="{{ 'bad' if i.kind == 'rule' else 'warn' }}">{{ i.msg }}</div>{% endfor %}
+{% if item.hold %}<p class="bad">暫停催收：{{ HOLD[item.hold] }}</p>
+<form class="inline" method="post" action="/receivables/items/{{ item.id }}/clear"><input name="reason" required placeholder="看過來信後的結論"><button class="plain">解除暫停</button></form>
+{% elif blockers %}<p class="soft">目前不會產生提醒：{{ blockers|join("；") }}</p>{% endif %}
+<h2>提醒信</h2>
+{% for r in item.reminders %}<details><summary>第 {{ r.stage }} 階段｜<span class="tag">{{ STATUS[r.status] }}</span> {{ r.cancel_reason }}</summary><pre>{{ r.body }}</pre></details>
+{% else %}<p class="soft">還沒有。</p>{% endfor %}
+</section>
+</div>
+{{ history_table(history, names) }}
+{% endblock %}

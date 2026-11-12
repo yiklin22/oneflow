@@ -1,0 +1,15 @@
+{% extends "base.html" %}{% block main %}
+<h1>人工接手</h1>
+<p class="soft">程式讀不懂、做不到或不該自己做的事都列在這裡，由人處理後寫下結果。</p>
+<div class="scroll"><table><tr><th>編號</th><th>流程</th><th>原因</th><th>說明</th><th>狀態</th><th>處理</th></tr>
+{% for h in rows %}<tr>
+<td>{% if links.get(h.entity) %}<a href="{{ links[h.entity].format(h.entity_id) }}">#{{ h.id }}</a>{% else %}#{{ h.id }}{% endif %}</td>
+<td>{{ FLOWS[h.flow] }}</td><td>{{ REASONS.get(h.reason, h.reason) }}</td><td>{{ h.detail }}</td>
+<td><span class="tag">{{ STATUS[h.status] }}</span>{% if h.resolution %}<div class="soft">{{ h.resolution }}</div>{% endif %}</td>
+<td>{% if h.status != "closed" %}
+{% if h.status == "open" %}<form class="inline" method="post" action="/handoffs/{{ h.id }}/take"><button class="plain">我來處理</button></form>{% endif %}
+<form class="inline" method="post" action="/handoffs/{{ h.id }}/close"><input name="resolution" placeholder="處理結果" required><button>結案</button></form>
+{% endif %}</td></tr>
+{% else %}<tr><td colspan="6" class="soft">目前沒有需要人工接手的項目。</td></tr>{% endfor %}
+</table></div>
+{% endblock %}

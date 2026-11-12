@@ -1,0 +1,15 @@
+{% macro data_fields(consents) %}
+<label>資料類別
+  <select name="data_class"><option value="synthetic">模擬資料</option><option value="real">真實文件（必須選同意紀錄）</option></select></label>
+<label>同意紀錄
+  <select name="consent_id"><option value="">無</option>{% for c in consents %}<option value="{{ c.id }}">#{{ c.id }} {{ c.party }}</option>{% endfor %}</select></label>
+{% endmacro %}
+{% macro history_table(rows, names) %}
+<h2>修改紀錄</h2>
+{% if rows %}<div class="scroll"><table><tr><th>時間</th><th>誰</th><th>欄位</th><th>原值</th><th>新值</th><th>說明</th></tr>
+{% for c in rows %}<tr><td>{{ c.at|taipei }}</td><td>{{ names.get(c.user_id, "系統") }}</td><td>{{ c.field }}</td><td>{{ c.old or "（空）" }}</td><td>{{ c.new or "（空）" }}</td><td>{{ c.note }}</td></tr>{% endfor %}
+</table></div>{% else %}<p class="soft">還沒有人修改過。</p>{% endif %}
+{% endmacro %}
+{% macro issues(list) %}
+{% for i in list %}<div class="{{ 'bad' if i.blocking else 'warn' }}">{{ "必須處理" if i.blocking else "提醒" }}：{{ i.msg }}</div>{% endfor %}
+{% endmacro %}

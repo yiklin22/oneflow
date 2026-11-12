@@ -1,0 +1,46 @@
+{% extends "base.html" %}{% from "_macros.html" import data_fields %}{% block main %}
+<h1>應收帳款助手</h1>
+<div class="grid">
+<form class="card" method="post" action="/receivables/files" enctype="multipart/form-data">
+<h2 style="margin-top:0">匯入</h2>
+<p><input type="file" name="files" multiple required accept=".csv,.xlsx,.eml"></p>
+<p><label><select name="kind"><option value="export">應收帳款匯出（CSV 或 Excel）</option><option value="mail">相關郵件（.eml，可多選）</option></select></label></p>
+<p>{{ data_fields(consents) }}</p><button>匯入</button>
+<p class="soft">請先匯入帳款，再匯入郵件。目前有 {{ total }} 筆帳款。</p>
+</form>
+<div class="card"><h2 style="margin-top:0">基準日與草稿</h2>
+<form class="inline" method="get" action="/receivables"><label>基準日 <input type="date" name="as_of" value="{{ as_of }}"></label><button class="plain">重新計算</button></form>
+<form method="post" action="/receivables/draft"><input type="hidden" name="as_of" value="{{ as_of }}">
+<p>可以產生草稿的帳款：{{ todo.to_draft|length }} 筆</p><button>產生提醒草稿</button></form>
+<p class="soft">本系統不認定欠款，也不催討有爭議的款項。客戶只要有來信，相關帳款就暫停，等人看過。「寄送」是把信寫入寄件匣資料夾，由您用自己的信箱寄出。</p>
+</div>
+</div>
+
+{% if todo.unlinked %}<h2 class="bad">先處理：無法歸戶或無法讀取（{{ todo.unlinked|length }}）</h2>
+<p class="soft">這些來信可能與任何一筆帳款有關。處理完之前，所有草稿都不能核准或寄送。</p>
+{% for h in todo.unlinked %}<div class="card">{{ h.detail }}
+{% set s = signals.get(h.entity_id) if h.entity == "mail_signal" else none %}
+{% if s %}<pre>{{ s.mail.body }}</pre>
+<form class="inline" method="post" action="/receivables/signals/{{ s.id }}/assign"><label>這封信屬於
+<select name="customer">{% for c in customers %}<option>{{ c }}</option>{% endfor %}</select></label><button>歸戶</button></form>
+{% else %}<a href="/handoffs">到人工接手結案</a>{% endif %}</div>{% endfor %}{% endif %}
+
+{% for key, title, note in (("claims_paid", "核對：客戶稱已付款", "請對銀行帳，不要催。"), ("dispute", "爭議：不催收", "整理如下，請業務或主管處理。"),
+  ("promise", "客戶已承諾付款日", ""), ("other", "有來信待閱讀", "程式分不出這封信在說什麼，請人看。"), ("wrong", "資料有誤", "金額或日期不合規則，請回 ERP 更正。"), ("missing", "缺件", "補齊後才方便催收。")) %}
+{% if todo[key] %}<h2>{{ title }}（{{ todo[key]|length }}）</h2>{% if note %}<p class="soft">{{ note }}</p>{% endif %}
+<div class="scroll"><table><tr><th>客戶</th><th>發票</th><th>到期日</th><th class="num">逾期天數</th><th class="num">未收餘額</th><th>說明</th></tr>
+{% for i in todo[key] %}<tr><td>{{ i.customer }}</td><td><a href="/receivables/items/{{ i.id }}?as_of={{ as_of }}">{{ i.invoice_no or "（無發票號碼）" }}</a></td>
+<td>{{ i.due_date or "—" }}</td><td class="num">{{ days(i) or "—" }}</td><td class="num">{{ balance(i)|money }}</td>
+<td>{% if key in ("wrong", "missing") %}{% for x in i.issues %}{{ x.msg }}{{ "；" if not loop.last }}{% endfor %}{% else %}{{ HOLD[i.hold] }}{% endif %}</td></tr>{% endfor %}
+</table></div>{% endif %}{% endfor %}
+
+{% for key, title in (("to_approve", "草稿待核准"), ("to_send", "已核准待寄送")) %}
+{% if todo[key] %}<h2>{{ title }}（{{ todo[key]|length }}）</h2>
+{% for r in todo[key] %}<details class="card"><summary>{{ r.item.customer }}｜{{ r.subject }}｜餘額 {{ balance(r.item)|money }}｜收件人 {{ r.to }}</summary>
+{% if key == "to_approve" %}
+<form method="post" action="/receivables/reminders/{{ r.id }}/edit"><textarea name="body" aria-label="草稿內容">{{ r.body }}</textarea><button class="plain">儲存修改</button></form>
+<form class="inline" method="post" action="/receivables/reminders/{{ r.id }}/approve"><input type="hidden" name="as_of" value="{{ as_of }}"><button>核准</button></form>
+{% else %}<pre>{{ r.body }}</pre>
+<form class="inline" method="post" action="/receivables/reminders/{{ r.id }}/send"><input type="hidden" name="as_of" value="{{ as_of }}"><button>寫入寄件匣</button></form>{% endif %}
+<a href="/receivables/items/{{ r.item.id }}?as_of={{ as_of }}">看這筆帳款</a></details>{% endfor %}{% endif %}{% endfor %}
+{% endblock %}

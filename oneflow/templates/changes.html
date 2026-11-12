@@ -1,0 +1,9 @@
+{% extends "base.html" %}{% block main %}
+<h1>修改紀錄</h1>
+<p class="soft">最近 300 筆。「系統」表示由匯入或規則造成的變更。</p>
+<div class="scroll"><table><tr><th>時間</th><th>誰</th><th>流程</th><th>對象</th><th>欄位</th><th>原值</th><th>新值</th><th>說明</th></tr>
+{% for c in rows %}<tr><td>{{ c.at|taipei }}</td><td>{{ names.get(c.user_id, "系統") }}</td><td>{{ FLOWS.get(c.flow, "共用") }}</td><td>{{ c.entity }} #{{ c.entity_id }}</td>
+<td>{{ c.field }}</td><td>{{ (c.old or "（空）")|truncate(60) }}</td><td>{{ (c.new or "（空）")|truncate(60) }}</td><td>{{ c.note }}</td></tr>
+{% else %}<tr><td colspan="8" class="soft">還沒有紀錄。</td></tr>{% endfor %}
+</table></div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}{% from "_macros.html" import history_table %}{% block main %}
+{% set open = e.status not in ("confirmed", "closed") %}
+<h1>報修 #{{ e.id }} <span class="tag">{{ STATUS[e.status] }}</span>{% if e.after_hours %} <span class="tag">非營業時間進線</span>{% endif %}</h1>
+{% for h in handoffs %}{% if h.status != "closed" %}<p class="err">{{ REASONS.get(h.reason, h.reason) }}：{{ h.detail }}　<a href="/handoffs">到人工接手結案</a></p>{% endif %}{% endfor %}
+<div class="two">
+<section class="card"><h2 style="margin-top:0">原文（{{ "LINE 對話" if e.channel == "line" else "表單內容" }}）</h2>
+{% for m in e.messages %}<div class="msg {{ m.direction }}"><div class="soft" style="font-size:.8rem">{{ "客戶" if m.direction == "in" else "系統" }} {{ m.at|taipei }}{% if m.direction == "out" and not m.delivered %}（未送出：未設定 LINE 權杖）{% endif %}</div><pre>{{ m.text }}</pre></div>{% endfor %}
+</section>
+<section class="card"><h2 style="margin-top:0">接單摘要</h2>
+{% if missing %}<p class="warn">還缺：{% for f in missing %}{{ LABELS[f] }}{{ "、" if not loop.last }}{% endfor %}</p>{% endif %}
+<table>{% for field, label in LABELS.items() %}<tr><th>{{ label }}</th><td>
+{% if open %}<form class="inline" method="post" action="/repairs/{{ e.id }}/edit"><input type="hidden" name="field" value="{{ field }}">
+<input name="value" value="{{ e[field] or '' }}" size="28" aria-label="{{ label }}"><button class="plain">存</button></form>{% else %}{{ e[field] or "—" }}{% endif %}
+{% if field == "slot_text" and (e.slot_date or e.slot_part) %}<div class="soft">程式讀成：{{ e.slot_date or "日期未定" }} {{ e.slot_part or "" }}（請對照原文）</div>{% endif %}
+</td></tr>{% endfor %}
+{% if e.appointment %}<tr><th>預約時間</th><td><strong>{{ e.appointment|taipei }}</strong>（{{ names.get(e.confirmed_by) }} 確認）</td></tr>{% endif %}
+</table>
+{% if open %}
+<h2>確認預約</h2>
+<form class="inline" method="post" action="/repairs/{{ e.id }}/confirm"><label>到府時間 <input type="datetime-local" name="value" required></label><button {{ "disabled" if missing }}>確認預約</button></form>
+<p class="soft">請先與客戶聯絡確認。確認後才算成立工單；系統不會自動通知客戶。</p>
+<form class="inline" method="post" action="/repairs/{{ e.id }}/close"><input name="value" required placeholder="不成立的原因"><button class="plain">結案不派工</button></form>
+{% endif %}
+</section>
+</div>
+{{ history_table(history, names) }}
+{% endblock %}

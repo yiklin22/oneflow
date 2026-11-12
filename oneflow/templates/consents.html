@@ -1,0 +1,16 @@
+{% extends "base.html" %}{% block main %}
+<h1>資料使用同意</h1>
+<p class="soft">真實文件必須先有對方同意的紀錄才能匯入。沒有紀錄，或紀錄已撤回時，系統會拒絕。</p>
+<form class="card" method="post" action="/consents">
+<p><label>同意的對象 <input name="party" required placeholder="公司或客戶名稱"></label>
+<label>範圍 <select name="scope">{% for k, v in FLOWS.items() %}<option value="{{ k }}">{{ v }}</option>{% endfor %}<option value="all">全部流程</option></select></label></p>
+<p><label>取得方式 <input name="basis" required size="40" placeholder="例如：2026-11-10 簽署資料使用同意書，正本存檔"></label></p>
+<button>記錄同意</button>
+</form>
+<div class="scroll"><table><tr><th>編號</th><th>對象</th><th>範圍</th><th>取得方式</th><th>記錄時間</th><th>狀態</th></tr>
+{% for c in rows %}<tr><td>#{{ c.id }}</td><td>{{ c.party }}</td><td>{{ FLOWS.get(c.scope, "全部流程") }}</td><td>{{ c.basis }}</td><td>{{ c.granted_at|taipei }}</td>
+<td>{% if c.revoked_at %}<span class="bad">已於 {{ c.revoked_at|taipei }} 撤回</span>{% else %}
+<form class="inline" method="post" action="/consents/{{ c.id }}/revoke"><span class="tag">有效</span><button class="plain">撤回</button></form>{% endif %}</td></tr>
+{% else %}<tr><td colspan="6" class="soft">還沒有同意紀錄。目前只能匯入模擬資料。</td></tr>{% endfor %}
+</table></div>
+{% endblock %}

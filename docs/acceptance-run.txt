@@ -1,0 +1,102 @@
+== orders
+{
+ "files": 50,
+ "lines": 208,
+ "lines_missing": 0,
+ "orders_clean": 21,
+ "orders_with_flags": 26,
+ "header_wrong": 0,
+ "duplicates_expected": 2,
+ "duplicates_caught": 2,
+ "unreadable_expected": 1,
+ "unreadable_handed_off": 1,
+ "part": {
+  "right": 193,
+  "right_flagged": 6,
+  "left_to_person": 6,
+  "wrong_flagged": 3,
+  "wrong_silent": 0,
+  "silent": []
+ },
+ "qty": {
+  "right": 196,
+  "right_flagged": 9,
+  "left_to_person": 3,
+  "wrong_flagged": 0,
+  "wrong_silent": 0,
+  "silent": []
+ },
+ "due": {
+  "right": 175,
+  "right_flagged": 26,
+  "left_to_person": 7,
+  "wrong_flagged": 0,
+  "wrong_silent": 0,
+  "silent": []
+ }
+}
+== receivables
+{
+ "items_in_export": 60,
+ "items_loaded": 60,
+ "mails": 16,
+ "mails_loaded": 15,
+ "mail_piles_right": 14,
+ "mails_unlinked": 1,
+ "overdue_expected": 36,
+ "overdue_found": 36,
+ "overdue_false": 0,
+ "planted_problems": 12,
+ "planted_problems_flagged": 12,
+ "held_expected_among_overdue": 23,
+ "may_be_reminded": 11,
+ "drafts": 14,
+ "drafts_missed": 0,
+ "drafts_for_held_or_paid_items": [
+  "BN20560501",
+  "BQ93351127",
+  "EQ76452956"
+ ],
+ "drafts_second_run": 0,
+ "approvals_refused_while_a_mail_is_unlinked": 14,
+ "approved_after_assigning_it": 11,
+ "cancelled_by_assigning_it": 3,
+ "same_export_again": {
+  "new": 0,
+  "updated": 0,
+  "repeat": true
+ },
+ "later_export": {
+  "new": 0,
+  "updated": 2,
+  "repeat": false
+ },
+ "cancelled_because_paid": 2,
+ "sent": 9,
+ "files_in_outbox": 9,
+ "second_send_refused": 9,
+ "sent_to_paid_held_or_disputed": [],
+ "sent_twice": 0
+}
+== repairs
+{
+ "enquiries": 30,
+ "emergencies_expected": 3,
+ "emergencies_handed_off": 3,
+ "false_emergencies": 0,
+ "repair_requests": 27,
+ "complete": 24,
+ "expected_complete": 24,
+ "complete_but_field_wrong": [],
+ "slot_date_wrong": [],
+ "after_hours": 11,
+ "after_hours_complete": 10,
+ "work_orders_confirmed": 24,
+ "after_hours_work_orders": 10,
+ "price_questions": 3,
+ "price_questions_answered_with_refusal": 3,
+ "questions_asked": 35,
+ "completeness_rate": 0.889,
+ "still_collecting": 2,
+ "handed_to_a_person": 4
+}

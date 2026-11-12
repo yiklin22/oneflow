@@ -1,0 +1,11 @@
+{% extends "base.html" %}{% block main %}
+<h1>今天的工作</h1>
+{% if waiting %}<p class="err">有 {{ waiting }} 件需要人工接手。<a href="/handoffs">前往處理</a></p>{% endif %}
+<div class="grid">
+{% for flow, rows in cards.items() %}{% if may(user, flow) %}
+<div class="card"><h2 style="margin-top:0"><a href="/{{ flow }}">{{ FLOWS[flow] }}助手</a></h2>
+<table>{% for label, n in rows %}<tr><td>{{ label }}</td><td class="num">{{ n }}</td></tr>{% endfor %}</table></div>
+{% endif %}{% endfor %}
+</div>
+<p class="soft">本系統只整理資料並產生草稿。出貨、改價、入帳、催收與預約，都由人決定。</p>
+{% endblock %}

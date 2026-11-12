@@ -1,0 +1,20 @@
+oneflow live run, 2026-11-12 22:12 CST, uvicorn on port 8813, embedded PostgreSQL, synthetic data only
+anonymous GET /orders           -> 303 http://127.0.0.1:8813/login
+POST /login (admin)             -> 303
+GET / -> 200 4707 bytes
+GET /orders -> 200 18829 bytes
+GET /orders/1 -> 200 10245 bytes
+GET /receivables?as_of=2026-11-30 -> 200 14263 bytes
+GET /repairs -> 200 11722 bytes
+GET /repairs/1 -> 200 6554 bytes
+GET /handoffs -> 200 6817 bytes
+GET /consents -> 200 4612 bytes
+GET /changes -> 200 3957 bytes
+GET /repair -> 200 4339 bytes
+orders listed                   -> 50
+POST /receivables/draft         -> 產生 14 份草稿
+approve while a mail is unlinked-> 有 1 封來信尚未歸戶
+repairs listed                  -> 30
+open hand-offs                  -> 6
+cross-site POST                 -> 403
+LINE webhook, no secret set     -> 503
