@@ -1,3 +1,5 @@
+import os
+
 import pytest
 from sqlalchemy import create_engine, text
 
@@ -24,8 +26,13 @@ def add_users(session):
 
 @pytest.fixture(scope="session")
 def engine(tmp_path_factory):
-    """A real PostgreSQL for the test run, started from the pgserver package."""
-    engine = create_engine(db.start_embedded(tmp_path_factory.mktemp("pg")))
+    """A real PostgreSQL for the test run: ONEFLOW_TEST_DATABASE_URL if set (CI), else started from the pgserver package.
+
+    The tests truncate every table, so ONEFLOW_TEST_DATABASE_URL must point at a throwaway database.
+    The app's DATABASE_URL is deliberately ignored here so a developer's data is never wiped.
+    """
+    url = os.environ.get("ONEFLOW_TEST_DATABASE_URL")
+    engine = create_engine(db._url(url) if url else db.start_embedded(tmp_path_factory.mktemp("pg")))
     db.set_engine(engine)
     return engine
 
